@@ -29,11 +29,11 @@ def animate(k):
         if len(eachLine)>1:
             x,y = eachLine.split(' ')
             if i%3 == 0:
-            	yar.append(float(y))
-            	xar.append(datetime.strptime(x, '%H:%M:%S'))
+                yar.append(float(y))
+                xar.append(datetime.strptime(x, '%H:%M:%S'))
             if i%3 == 1:
-            	ya1.append(float(y))
-            	xa1.append(datetime.strptime(x, '%H:%M:%S'))
+                ya1.append(float(y))
+                xa1.append(datetime.strptime(x, '%H:%M:%S'))
             if i%3 == 2:
                 ya2.append(float(y))
                 xa2.append(datetime.strptime(x, '%H:%M:%S'))            
