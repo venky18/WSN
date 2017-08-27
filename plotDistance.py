@@ -8,15 +8,15 @@ ax2 = fig.add_subplot(2, 2, 2)
 ax3 = fig.add_subplot(2, 1, 2)
 ax1.set_title('wire1')
 ax1.set_xlabel('time')
-ax1.set_ylabel('Reflection Coefficient1')
+ax1.set_ylabel('distance 1 ')
 
 ax2.set_title('wire2')
 ax2.set_xlabel('time')
-ax2.set_ylabel('Reflection Coefficient2')
+ax2.set_ylabel('distance 2')
 
 ax3.set_title('wire3')
 ax3.set_xlabel('time')
-ax3.set_ylabel('Reflection Coefficient3')
+ax3.set_ylabel('distance 3')
 
 
 def animate(k):
