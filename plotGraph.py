@@ -4,9 +4,9 @@ from datetime import datetime
 
 fig = plt.figure()
 # plt.rc('axes', titlesize=8)
-ax1 = fig.add_subplot(2,2,1)
-ax2 = fig.add_subplot(2,2,2)
-ax3 = fig.add_subplot(2,1,2)
+ax1 = fig.add_subplot(2, 2, 1)
+ax2 = fig.add_subplot(2, 2, 2)
+ax3 = fig.add_subplot(2, 1, 2)
 ax1.set_title('wire1')
 ax1.set_xlabel('time')
 ax1.set_ylabel('Reflection Coefficient1')
@@ -21,12 +21,12 @@ ax3.set_ylabel('Reflection Coefficient3')
 
 def animate(k):
     i = 0 
-    pullData = open("newfiletdrdata.txt","r").read()
+    pullData = open("sampleText.txt", "r").read()
     dataArray = pullData.split('\n')
-    xar,xa1,xa2 = [],[],[]
-    yar,ya1,ya2 = [],[],[]
+    xar, xa1, xa2 = [], [], []
+    yar, ya1, ya2 = [], [], []
     for eachLine in dataArray:
-        if len(eachLine)>1:
+        if len(eachLine) > 1:
             x,y = eachLine.split(' ')
             if i%3 == 0:
                 yar.append(float(y))
@@ -38,9 +38,9 @@ def animate(k):
                 ya2.append(float(y))
                 xa2.append(datetime.strptime(x, '%H:%M:%S'))            
             i += 1
-    ax1.plot_date(xar,yar,linestyle='-')
-    ax2.plot_date(xa1,ya1,linestyle='-',color='b')
-    ax3.plot_date(xa2,ya2,linestyle='-',color='g')
+    ax1.plot_date(xar, yar, linestyle='-')
+    ax2.plot_date(xa1, ya1, linestyle='-', color='b')
+    ax3.plot_date(xa2, ya2, linestyle='-', color='g')
  
-ani = animation.FuncAnimation(fig, animate, interval=1000000)
+ani = animation.FuncAnimation(fig, animate, interval=1000)
 plt.show()
