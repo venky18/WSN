@@ -11,7 +11,8 @@ def reset_ax1():
     ax1.set_title('wire1')
     ax1.set_xlabel('time')
     ax1.set_ylabel('displacement 1 ')
-    ax1.set_xticks(range(100), minor=True)
+    ax1.set_xlim(0,100)
+    # ax1.set_xticks(range(100), minor=True)
     # ax1.set_xticklabels(range(100))
 
 ax2.set_title('wire2')
@@ -49,10 +50,11 @@ def animate(k):
                 ax1.clear()
                 reset_ax1()
                 ya0,xa0 = [],[]
+                i = 0
     ax1.plot(xa0, ya0, linestyle='-', color='crimson')
     ax2.plot(xa1, ya1, linestyle='-', color='midnightblue')
     ax3.plot(xa2, ya2, linestyle='-', color='coral')
 
 
-ani = animation.FuncAnimation(fig, animate, interval=100)
+ani = animation.FuncAnimation(fig, animate, interval=1000)
 plt.show()

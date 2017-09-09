@@ -12,6 +12,6 @@ def main():
         print(data)
         file.close() 
         i += 0.2
-        time.sleep(0.2)
+        time.sleep(0.5)
 
 main()
